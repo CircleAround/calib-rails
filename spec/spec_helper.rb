@@ -16,13 +16,14 @@
 
 ENV['RAILS_VERSION'] ||= `bundle exec rails -v | sed -e 's/Rails //g'`.strip
 ENV['RAILS_VERSION']
-
+puts "########################### #{ENV['RAILS_VERSION']}"
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path(
   "../dummy/app_#{ENV['RAILS_VERSION']}/config/environment",
   __FILE__)
 require 'rspec/rails'
-require 'rspec/autorun'
+
+require "calib/rails"
 
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate
