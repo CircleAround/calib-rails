@@ -10,7 +10,7 @@ Gem::Specification.new do |s|
   s.version     = Calib::Rails::VERSION
   s.authors     = ["ms2sato"]
   s.email       = ["ms2.sato@gmail.com"]
-  s.homepage    = "https://github.com/CircleAround/calib"
+  s.homepage    = "https://github.com/CircleAround/calib-rails"
   s.summary     = "Calib is Foundation library by CIRCLE AROUND Inc."
   s.description = "Calib is Foundation library by CIRCLE AROUND Inc."
   s.license     = "MIT"
