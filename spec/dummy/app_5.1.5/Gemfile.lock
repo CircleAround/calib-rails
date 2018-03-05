@@ -1,8 +1,8 @@
 PATH
   remote: /Users/ms2/dev/projects/calib-rails
   specs:
-    calib-rails (0.1.0)
-      rails (~> 5.1.5)
+    calib-rails (0.1.1)
+      rails (>= 5.1.0)
 
 GEM
   remote: https://rubygems.org/
