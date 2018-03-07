@@ -1,6 +1,4 @@
 module Calib::SoftDeletion::MigrationEnhancable
-  include ActiveSupport::Concern
-
   def add_unique_column_for_soft_deletion(table, unique_column, filter_column = :alive)
     add_column_for_soft_deletion(table, filter_column)
     add_unique_index_for_soft_deletion(table, unique_column, filter_column)

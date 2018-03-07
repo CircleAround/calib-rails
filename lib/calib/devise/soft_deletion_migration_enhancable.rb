@@ -1,5 +1,4 @@
 module Calib::Devise::SoftDeletionMigrationEnhancable
-  include ActiveSupport::Concern
   include Calib::SoftDeletion::MigrationEnhancable
 
   def change_for_device_soft_deletion(scope, filter_column = :alive, canceled_at_column = :canceled_at)
