@@ -16,7 +16,7 @@
 
 ENV['RAILS_VERSION'] ||= `bundle exec rails -v | sed -e 's/Rails //g'`.strip
 ENV['RAILS_VERSION']
-puts "########################### #{ENV['RAILS_VERSION']}"
+
 ENV['RAILS_ENV'] ||= 'test'
 require File.expand_path(
   "../dummy/app_#{ENV['RAILS_VERSION']}/config/environment",

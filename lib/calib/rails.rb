@@ -10,7 +10,7 @@ module Calib
 
   module Pundit
     autoload :ControllerNestable, 'calib/pundit/controller_nestable'
-    autoload :Nestable, 'nestable'
+    autoload :Nestable, 'calib/pundit/nestable'
   end
 
   module SoftDeletion
