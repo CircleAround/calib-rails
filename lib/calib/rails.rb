@@ -4,6 +4,7 @@ module Calib
   end
   
   module Devise
+    autoload :FriendlyForwardable, 'calib/devise/friendly_forwardable'
     autoload :SoftDeletionMigrationEnhancable, 'calib/devise/soft_deletion_migration_enhancable'
     autoload :SoftDeletion, 'calib/devise/soft_deletion'
   end  
