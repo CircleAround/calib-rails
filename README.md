@@ -1,8 +1,11 @@
 # Calib::Rails
-Short description and motivation.
+Calib::Rails is modules of something tips for Rails.
 
 ## Usage
-How to use my plugin.
+Please read rdocs.
+
+- [Calib::Controllers::BasicAuth](http://www.rubydoc.info/gems/calib-rails/Calib/Controllers/BasicAuth)
+- [Calib::Devise::FriendlyForwardable](http://www.rubydoc.info/gems/calib-rails/Calib/Devise/FriendlyForwardable)
 
 ## Installation
 Add this line to your application's Gemfile:
@@ -20,9 +23,6 @@ Or install it yourself as:
 ```bash
 $ gem install calib-rails
 ```
-
-## Contributing
-Contribution directions go here.
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
