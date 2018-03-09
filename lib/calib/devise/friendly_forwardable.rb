@@ -7,7 +7,6 @@
 #   include Calib::Devise::FriendlyForwardable
 #  ...
 # end
-
 module Calib::Devise::FriendlyForwardable
   extend ActiveSupport::Concern
 
