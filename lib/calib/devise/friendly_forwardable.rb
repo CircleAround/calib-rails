@@ -2,11 +2,11 @@
 # Redirect back to current page after sign in.
 # @see https://github.com/plataformatec/devise/wiki/How-To:-Redirect-back-to-current-page-after-sign-in,-sign-out,-sign-up,-update
 # 
-# [usage]
-# class ApplicationController < ActionController::Base
-#   include Calib::Devise::FriendlyForwardable
-#  ...
-# end
+# === usage
+#  class ApplicationController < ActionController::Base
+#    include Calib::Devise::FriendlyForwardable
+#    ...
+#  end
 module Calib::Devise::FriendlyForwardable
   extend ActiveSupport::Concern
 

@@ -2,19 +2,20 @@
 # authenticated status stored in session.
 # avoid frequently logging in
 #
-# [usage]
-# class ApplicationController < ActionController::Base
-#   include Calib::Controllers::BasicAuth
-#   basic_auth(user: 'myuser', pass: 'secret')
-#  ...
-# end
+# === usage
+#  class ApplicationController < ActionController::Base
+#    include Calib::Controllers::BasicAuth
+#    basic_auth(user: 'myuser', pass: 'secret')
+#    ...
+#  end
 # 
-# basic_auth # read ENV['BASIC_AUTH_USER'] and ENV['BASIC_AUTH_PASS']
-# basic_auth(user: 'myuser', pass: 'secret') # standard
+# === options
+#  basic_auth # read ENV['BASIC_AUTH_USER'] and ENV['BASIC_AUTH_PASS']
+#  basic_auth(user: 'myuser', pass: 'secret') # standard
 #
-# basic_auth(user: 'myuser', pass: 'secret') do
-#   request.domain != 'localhost' # localhost is unblocked domain.
-# end
+#  basic_auth(user: 'myuser', pass: 'secret') do |request|
+#    request.domain != 'localhost' # localhost is unblocked domain.
+#  end
 module Calib::Controllers::BasicAuth
   extend ActiveSupport::Concern
 
