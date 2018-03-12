@@ -1,20 +1,27 @@
-# on schema:
+# == Soft deletation for devise
+# use with SoftDeletionMigrationEnhancable
 #
-# with coulumn for soft_deleted_flag
-# t.integer "alive", default: 1
+# === usage 
+# include to Devise Model.
 #
-# unique index
-# [for postgresql] # partial indexes
-#   t.index ["email", "alive"], name: "index_users_on_email_and_alive", unique: true, where: "(alive = 1)"
-# [for mysql] # ignoring null column
-#   t.index ["email", "alive"], name: "index_users_on_email_and_alive", unique: true
+#  class User < ApplicationRecord
+#    include Calib::Devise::SoftDeletion
 #
+#    devise :database_authenticatable, :registerable,
+#           :recoverable, :rememberable, :trackable, :validatable,
+#           :confirmable  
+#
+#    devise_soft_deletable # call below `device` method 
+#
+#    ...
+#  end  
 module Calib::Devise::SoftDeletion
   extend ActiveSupport::Concern
 
   included do
     class_attribute :alive_column_name
 
+    # initialize method to call on Devise Model.
     def self.devise_soft_deletable(alive_column_name = :alive)
       self.alive_column_name = alive_column_name
 
@@ -41,18 +48,22 @@ module Calib::Devise::SoftDeletion
     end
   end
 
+  # check canceled
   def canceled?
     self.alive_value == nil
   end
 
+  # do soft destroy
   def soft_destroy
     save if pre_destroy
   end
 
+  # do soft destroy! 
   def soft_destroy!
     save! if pre_destroy
   end
 
+  # get alive_column_value
   def alive_value
     self.send(self.class.alive_column_name)
   end
