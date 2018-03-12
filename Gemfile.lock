@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    calib-rails (0.1.10)
+    calib-rails (0.1.11)
       rails (>= 5.1.0)
 
 GEM
