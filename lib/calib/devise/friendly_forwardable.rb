@@ -16,7 +16,7 @@ module Calib::Devise::FriendlyForwardable
 
   private
 
-  # overwrite _after_sign_in_path_for_ provided Devise
+  # override _after_sign_in_path_for_ provided Devise
   def after_sign_in_path_for(resource)
     friendly_forwarding_path(resource)
   end
@@ -25,8 +25,13 @@ module Calib::Devise::FriendlyForwardable
   # 
   # @see https://github.com/plataformatec/devise/wiki/How-To:-redirect-to-a-specific-page-on-successful-sign-in
   def friendly_forwarding_path(r = devise_key_for_store_location)
-    request.env['omniauth.origin'] || stored_location_for(r) || signed_in_root_path(r)
+    request.env['omniauth.origin'] || stored_location_for(r) || default_root_path(r)
   end
+
+  # default root path on blank of stored location 
+  def default_root_path(r)
+    signed_in_root_path(r)
+  end  
 
   # if this is true, store location.
   def storable_location?
