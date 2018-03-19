@@ -9,6 +9,10 @@ module Calib
     autoload :SoftDeletion, 'calib/devise/soft_deletion'
   end  
 
+  module Lang
+    autoload :Namespace, 'calib/lang/namespace'
+  end
+
   module Pundit
     autoload :ControllerNestable, 'calib/pundit/controller_nestable'
     autoload :Nestable, 'calib/pundit/nestable'
