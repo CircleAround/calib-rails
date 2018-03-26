@@ -7,8 +7,8 @@ Please read following rdocs.
 ### Basic Auth
 - [Calib::Controllers::BasicAuth](http://www.rubydoc.info/gems/calib-rails/Calib/Controllers/BasicAuth)
 
-### Utilities for devise
-Support libraries for [devise](https://github.com/plataformatec/devise) .
+### Utilities for [devise](https://github.com/plataformatec/devise)
+Support libraries for [devise](https://github.com/plataformatec/devise).
 
 #### Friendly forwarding
 Redirect to accecced URL on signing in.
