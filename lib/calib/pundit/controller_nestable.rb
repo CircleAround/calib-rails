@@ -11,6 +11,7 @@ module Calib::Pundit::ControllerNestable
   end
 
   def initialize(user, record)
+    super
     @user = user
     @record = record.is_a?(Array) ? record.last : record
   end
@@ -23,6 +24,7 @@ module Calib::Pundit::ControllerNestable
     attr_reader :user, :scope
 
     def initialize(user, scope)
+      super
       @user = user
       @scope = scope.is_a?(Array) ? scope.last : scope
     end
