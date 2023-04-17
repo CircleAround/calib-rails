@@ -30,8 +30,8 @@ module Calib::Devise::SoftDeletion
       # https://gist.github.com/brenes/4503386
       self._validators.delete(:email)
       self._validate_callbacks.each do |callback|
-        if callback.raw_filter.respond_to? :attributes
-          callback.raw_filter.attributes.delete :email
+        if callback.filter.respond_to? :attributes
+          callback.filter.attributes.delete :email
         end
       end
 
